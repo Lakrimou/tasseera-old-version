@@ -11,6 +11,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestApiTasseeraProvider } from '../providers/rest-api-tasseera/rest-api-tasseera';
+import {SigninPage} from "../pages/signin/signin";
+import {SignupPage} from "../pages/signup/signup";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { RestApiTasseeraProvider } from '../providers/rest-api-tasseera/rest-api
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SigninPage,
+    SignupPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,7 +36,9 @@ import { RestApiTasseeraProvider } from '../providers/rest-api-tasseera/rest-api
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SignupPage,
+    SigninPage,
   ],
   providers: [
     StatusBar,
